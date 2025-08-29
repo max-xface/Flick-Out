@@ -225,6 +225,26 @@ The game features dynamic LED lighting that responds to different game states:
 - Check DFPlayer wiring (RX to GPIO 21, TX to GPIO 16)
 - Ensure volume is not set to 0
 
+⚠️ Beware of the clones!
+Some DFPlayer Mini clones have different behaviors than the original:
+
+File naming: Clone modules may require 4-digit naming (0001.mp3, 0002.mp3) instead of 3-digit (001.mp3, 002.mp3)
+Folder structure: Clone modules may require MP3 files to be placed in a "MP3" folder on the SD card
+Code modification: If using a clone, you'll need to modify the track numbers in the code accordingly
+
+SD Card structure for clones:
+sdcard/
+└── MP3/
+    ├── 0001.mp3    # Boot music
+    ├── 0002.mp3    # Game start sound
+    ├── 0003.mp3    # Weak punch sound
+    ├── 0004.mp3    # Medium punch sound
+    ├── 0005.mp3    # Strong punch sound
+    ├── 0008.mp3    # New highscore victory sound
+    ├── 0009.mp3    # Score animation sound
+    └── 0010.mp3    # Countdown music
+If you suspect you have a clone module, try both file naming conventions to determine which works with your specific hardware.
+
 ### 📺 Display issues
 
 - Ensure display power pin (GPIO 15) is high
