@@ -1738,8 +1738,9 @@ void setup() {
     Serial.println(F("1.Please recheck the connection!"));
     Serial.println(F("2.Please insert the SD card!"));
     //while (true) delay(0);
+  } else {
+    Serial.println(F("DFPlayer Mini online."));
   }
-  Serial.println(F("DFPlayer Mini online."));
 
 
   myDFPlayer.volume(1);
